@@ -16,3 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/demo/{name}/{id?}', function($name,$id=null){
+    echo $name." ";
+    echo $id;
+});
+
+Route::any('/test', function(){
+    echo "Testing the route";
+});
+
+/*Route::post('/test', function(){
+    echo "Testing the route";
+});*/
+
+//Route::put()
+
+//Route::patch()
+
+//Route::delete()
